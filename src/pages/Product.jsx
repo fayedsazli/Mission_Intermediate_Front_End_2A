@@ -5,6 +5,8 @@ import Pagination from "../common/Pagination";
 import CardGroup from "../layout/CardGroup";
 import Footer from "../layout/Footer";
 import Navbar from "../layout/Navbar";
+import ProductCard from "../layout/ProductCard";
+import ProductFilter from "../layout/ProductFilter";
 
 const Product = () => {
   return (
@@ -15,21 +17,8 @@ const Product = () => {
           <Desc judul={"judul"} deskripsi={"deskripsi"} />
         </div>
         <div className="row">
-          <div className="col-lg-3 col-12 bg-primary">
-            <h3>filter</h3>
-            <DropdownList />
-          </div>
-          <div className="container col-lg-7 col-12 bg-secondary row-gap-5">
-            <h3>Product</h3>
-            <div className="sorting d-flex gap-3 justify-content-lg-end justify-content-center">
-              <button>sorting</button>
-              <input type="text" placeholder="Cari kelas" />
-            </div>
-            <div className="row row-cols-1 row-cols-lg-2 row-gap-2 ">
-              <CardGroup />
-            </div>
-            <Pagination />
-          </div>
+          <ProductFilter />
+          <ProductCard />
         </div>
       </div>
       <Footer />

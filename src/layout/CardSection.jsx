@@ -7,11 +7,7 @@ const CardSection = () => {
     <>
       <TitleParagraf />
       <TabsCard />
-      <div className="container m-0 text-center">
-        <div className="row row-cols-1 row-cols-lg-3 row-gap-2">
-          <CardGroup />
-        </div>
-      </div>
+          <CardGroup CardWidth={"3"} />
     </>
   );
 };

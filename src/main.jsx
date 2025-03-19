@@ -11,6 +11,6 @@ import Product from './pages/Product.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>    
-    <Home />
+    <Product />
   </StrictMode>,
 )
