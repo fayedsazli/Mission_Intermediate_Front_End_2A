@@ -1,10 +1,10 @@
 import AvatarId from "./avatarId";
 import RatingCard from "./RatingCard";
 
-const Card = ({ title, image, avatarImg, desc, price }) => {
+const Card = ({ title, image, avatarImg, desc, price,tutorName,job }) => {
   return (
     <div className="col">
-      <div className="card p-2 d-flex flex-column flex-lg-row text-start justify-content-start">
+      <div className="card p-2 d-flex flex-column flex-lg-row text-start justify-content-start w-100">
         <div className="row g-0 w-100">
           {/* Bagian Gambar */}
           <div className="col-2 col-lg-12 d-flex align-items-center justify-content-center">
@@ -21,7 +21,7 @@ const Card = ({ title, image, avatarImg, desc, price }) => {
             <p className="card-text fs-6 text-secondary d-none d-lg-block">
               {desc}
             </p>
-            <AvatarId avatarImg={avatarImg} />
+            <AvatarId tutorName={tutorName} job={job}  avatarImg={avatarImg} />
           </div>
             <RatingCard price={price}/>
         </div>
