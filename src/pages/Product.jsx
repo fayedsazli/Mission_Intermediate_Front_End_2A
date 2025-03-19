@@ -4,6 +4,7 @@ import FormDesc from "../common/formDesc";
 import Pagination from "../common/Pagination";
 import CardGroup from "../layout/CardGroup";
 import Footer from "../layout/Footer";
+import LessonManager from "../layout/lessonManager";
 import Navbar from "../layout/Navbar";
 import ProductCard from "../layout/ProductCard";
 import ProductFilter from "../layout/ProductFilter";
@@ -17,12 +18,12 @@ const Product = () => {
           <Desc judul={"judul"} deskripsi={"deskripsi"} />
         </div>
         <div className="row">
-          <ProductFilter />
-          <ProductCard />
+            <ProductFilter />
+            <ProductCard />
         </div>
       </div>
       <Footer />
     </>
   );
-};
+};  
 export default Product;

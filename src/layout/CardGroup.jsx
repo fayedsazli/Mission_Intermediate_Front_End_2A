@@ -7,9 +7,9 @@ const CardGroup = ({ CardWidth }) => {
       <div
         className={`row row-cols-1 row-cols-lg-${CardWidth} g-3`}
       >
-        {lessonData.lessons.map((lesson, index) => (
+        {lessonData.lessons.map((lesson) => (
           <Card
-            key={index}
+            key={lesson.id}
             title={lesson.lesson_title}
             image={lesson.image || "Rectangle1.png"} // Pakai gambar dari JSON jika ada
             avatarImg={lesson.avatar || "Avatar1.svg"} // Pakai avatar dari JSON jika ada
