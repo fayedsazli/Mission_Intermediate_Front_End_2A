@@ -1,7 +1,8 @@
+import { Children } from "react";
 import AvatarId from "./avatarId";
 import RatingCard from "./RatingCard";
 
-const Card = ({ title, image, avatarImg, desc, price,tutorName,job }) => {
+const Card = ({ title, image, avatarImg, desc, price,tutorName,job,children }) => {
   return (
     <div className="col">
       <div className="card p-2 d-flex flex-column flex-lg-row text-start justify-content-start w-100">
@@ -24,6 +25,7 @@ const Card = ({ title, image, avatarImg, desc, price,tutorName,job }) => {
             <AvatarId tutorName={tutorName} job={job}  avatarImg={avatarImg} />
           </div>
             <RatingCard price={price}/>
+            {children}
         </div>
       </div>
     </div>

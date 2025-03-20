@@ -1,16 +1,12 @@
 import Pagination from "../common/Pagination";
+import SortingNsearch from "../common/SortingNSearch";
 import CardGroup from "./CardGroup";
-const ProductCard = () => {
+const ProductCard = ({children}) => {
   return (
-    <div className="container col-lg-7 col-12 bg-secondary row-gap-5">
+    <div className="container col-lg-9 col-12 bg-secondary row-gap-5">
     <h3>Product</h3>
-    <div
-      className="sorting d-flex gap-3 justify-content-lg-end justify-content-center"
-    >
-      <button>sorting</button>
-      <input type="text" placeholder="Cari kelas" />
-    </div>
-    <CardGroup CardWidth={"2"} />
+    <SortingNsearch />
+    <CardGroup children={children} CardWidth={"2"} />
     <Pagination />
       
     </div>

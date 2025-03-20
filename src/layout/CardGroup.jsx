@@ -1,7 +1,7 @@
 import Card from "../common/card";
 import lessonData from "../data/lessonData.json";
 
-const CardGroup = ({ CardWidth }) => {
+const CardGroup = ({ CardWidth,children }) => {
   return (
     <div className="container-fluid mt-4">
       <div
@@ -17,6 +17,7 @@ const CardGroup = ({ CardWidth }) => {
             price={lesson.price}
             tutorName={lesson.tutor_name}
             job={lesson.tutor_job}
+            children={children}
           />
         ))}
       </div>
