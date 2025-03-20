@@ -1,10 +1,9 @@
 import { useState } from "react";
-import jsonData from "./data.json"; // Import JSON
 
 
 export default function CrudApp() {
   // State untuk menyimpan data JSON
-  const [items, setItems] = useState(jsonData);
+  const [items, setItems] = useState("");
   const [newItem, setNewItem] = useState("");
   const [editId, setEditId] = useState(null);
 

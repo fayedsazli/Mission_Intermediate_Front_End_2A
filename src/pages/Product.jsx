@@ -1,15 +1,14 @@
+import { useState } from "react";
 import Desc from "../common/desc";
-import DropdownList from "../common/DropdownList";
-import FormDesc from "../common/formDesc";
-import Pagination from "../common/Pagination";
-import CardGroup from "../layout/CardGroup";
 import Footer from "../layout/Footer";
-import LessonManager from "../layout/lessonManager";
 import Navbar from "../layout/Navbar";
+import ProductAdd from "../layout/ProductAdd";
 import ProductCard from "../layout/ProductCard";
 import ProductFilter from "../layout/ProductFilter";
 
 const Product = () => {
+  const [showComponent, setShowComponent] = useState(null); // Menyimpan komponen yang akan ditampilkan
+
   return (
     <>
       <Navbar />
@@ -18,12 +17,20 @@ const Product = () => {
           <Desc judul={"judul"} deskripsi={"deskripsi"} />
         </div>
         <div className="row">
-            <ProductFilter />
-            <ProductCard />
+          <div className="col-lg-3 col-12 bg-primary p-3">
+            <button onClick={() => setShowComponent("filter")}>Tampilkan Filter</button>
+            <button onClick={() => setShowComponent("add")}>Tambah Data</button>
+
+            {/* Menampilkan komponen sesuai dengan state */}
+            {showComponent === "filter" && <ProductFilter />}
+            {showComponent === "add" && <ProductAdd />}
+          </div>
+          <ProductCard />
         </div>
       </div>
       <Footer />
     </>
   );
-};  
+};
+
 export default Product;
