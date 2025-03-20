@@ -18,17 +18,37 @@ const Product = () => {
         </div>
         <div className="row">
           <div className="col-lg-3 col-12 bg-primary p-3">
-            <button className="btn btn-light" onClick={() => setShowComponent("filter")}>Tampilkan Filter</button>
-            <button className="btn btn-success ms-2" onClick={() => setShowComponent("add")}>Tambah Data</button>
-
+            <button
+              className="btn btn-light"
+              onClick={() => setShowComponent("filter")}
+            >
+              Tampilkan Filter
+            </button>
+            <button
+              className="btn btn-success ms-2"
+              onClick={() => setShowComponent("add")}
+            >
+              Tambah Data
+            </button>
             {/* Menampilkan komponen sesuai dengan state */}
             {showComponent === "filter" && <ProductFilter />}
             {showComponent === "add" && <ProductAdd />}
           </div>
-          <ProductCard  >
-          <button type="button" className="btn btn-danger">Primary</button>
-          <button type="button" className="btn btn-secondary">Primary</button>
-            </ProductCard> 
+          <ProductCard>
+            <div className="row row-cols-lg-2 row-cols-1 ">
+              <div className="col-4">
+                <button type="button" className="btn btn-danger w-100">
+                  Primary
+                </button>
+              </div>
+              <div className="col-4">
+              
+                <button type="button" className="btn btn-secondary w-100">
+                  Primary
+                </button>
+              </div>
+            </div>
+          </ProductCard>
         </div>
       </div>
       <Footer />
