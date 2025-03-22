@@ -1,13 +1,28 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Desc from "../common/desc";
 import Footer from "../layout/Footer";
 import Navbar from "../layout/Navbar";
 import ProductAdd from "../layout/ProductAdd";
 import ProductCard from "../layout/ProductCard";
 import ProductFilter from "../layout/ProductFilter";
+import AddLesson from "../layout/AddDataLesson";
 
 const Product = () => {
-  const [showComponent, setShowComponent] = useState("filter"); // Menyimpan komponen yang akan ditampilkan
+  const [showComponent, setShowComponent] = useState("filter");
+  const [lessons, setLessons] = useState([]); // State utama
+
+  // Ambil data saat pertama kali komponen dimuat
+  useEffect(() => {
+    fetch("http://localhost:5000/lessons")
+      .then((res) => res.json())
+      .then((data) => setLessons(data))
+      .catch((error) => console.error("Error fetching data:", error));
+  }, []);
+
+  // Fungsi untuk menambah lesson baru
+  const addLesson = (newLesson) => {
+    setLessons([...lessons, newLesson]); // Menambahkan data ke state
+  };
 
   return (
     <>
@@ -30,25 +45,11 @@ const Product = () => {
             >
               Tambah Data
             </button>
-            {/* Menampilkan komponen sesuai dengan state */}
             {showComponent === "filter" && <ProductFilter />}
-            {showComponent === "add" && <ProductAdd />}
+            {showComponent === "add" && <AddLesson onAdd={addLesson} />}
           </div>
-          <ProductCard>
-            <div className="row row-cols-lg-2 row-cols-1 ">
-              <div className="col-4">
-                <button type="button" className="btn btn-danger w-100">
-                  Primary
-                </button>
-              </div>
-              <div className="col-4">
-              
-                <button type="button" className="btn btn-secondary w-100">
-                  Primary
-                </button>
-              </div>
-            </div>
-          </ProductCard>
+          {/* Kirim lessons ke ProductCard */}
+          <ProductCard lessons={lessons} />
         </div>
       </div>
       <Footer />
