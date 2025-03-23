@@ -1,6 +1,6 @@
 import Card from "../common/card";
 
-const CardGroup = ({ lessons, CardWidth = 3, children, handleDelete }) => {
+const CardGroup = ({ lessons, CardWidth = 3, onEdit, children }) => {
   return (
     <div className="container-fluid mt-4">
       <div className={`row row-cols-1 row-cols-lg-${CardWidth} g-3`}>
@@ -15,7 +15,10 @@ const CardGroup = ({ lessons, CardWidth = 3, children, handleDelete }) => {
             tutorName={lesson.tutor_name}
             job={lesson.tutor_job}
           >
-            {children && children(lesson.id, handleDelete)}
+            {children(lesson.id)}
+            <button onClick={() => onEdit(lesson.id)} className="btn btn-warning mx-2">
+              Edit
+            </button>
           </Card>
         ))}
       </div>
