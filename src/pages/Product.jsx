@@ -7,14 +7,12 @@ import ProductFilter from "../layout/ProductFilter";
 import AddLesson from "../layout/AddDataLesson";
 import useLessons from "../hooks/uselesson";
 
-const Product = () => {
+const Product = ({setPage}) => {
   const [lessons,setLessons] = useLessons();
-
-  // Fungsi untuk menambah lesson baru
 
   return (
     <>
-      <Navbar />
+       <Navbar setPage={setPage} />
       <div className="container d-flex flex-column text-center my-3">
         <div className="align-self-start">
           <Desc judul={"judul"} deskripsi={"deskripsi"} />
