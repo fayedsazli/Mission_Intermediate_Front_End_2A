@@ -1,4 +1,3 @@
-import { useState } from "react";
 import Desc from "../common/desc";
 import Footer from "../layout/Footer";
 import Navbar from "../layout/Navbar";
@@ -9,14 +8,10 @@ import AddLesson from "../layout/AddDataLesson";
 import useLessons from "../hooks/uselesson";
 
 const Product = () => {
-  const [showComponent, setShowComponent] = useState("filter");
   const [lessons,setLessons] = useLessons();
 
 
   // Fungsi untuk menambah lesson baru
-  const addLesson = (newLesson) => {
-    setLessons([...lessons, newLesson]); // Menambahkan data ke state
-  };
 
   return (
     <>
@@ -27,20 +22,7 @@ const Product = () => {
         </div>
         <div className="row">
           <div className="col-lg-3 col-12 bg-primary p-3">
-            <button
-              className="btn btn-light"
-              onClick={() => setShowComponent("filter")}
-            >
-              Tampilkan Filter
-            </button>
-            <button
-              className="btn btn-success ms-2"
-              onClick={() => setShowComponent("add")}
-            >
-              Tambah Data
-            </button>
-            {showComponent === "filter" && <ProductFilter />}
-            {showComponent === "add" && <AddLesson onAdd={addLesson} />}
+          <ProductFilter />
           </div>
           {/* Kirim lessons ke ProductCard */}
           <ProductCard lessons={lessons} setLessons={setLessons} />

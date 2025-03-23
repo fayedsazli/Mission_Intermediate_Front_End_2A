@@ -1,17 +1,16 @@
 import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 
-const AddLesson = ({ onAdd }) => {
+const AddLesson = ({ onAdd, onCancel }) => { // Tambahkan onCancel sebagai prop
   const [lessonTitle, setLessonTitle] = useState("");
   const [lessonDesc, setLessonDesc] = useState("");
   const [tutorName, setTutorName] = useState("");
   const [tutorJob, setTutorJob] = useState("");
   const [price, setPrice] = useState("");
-  
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
+
     const newLesson = {
       id: uuidv4(), // ID sementara sebelum disimpan ke server
       lesson_title: lessonTitle,
@@ -84,7 +83,8 @@ const AddLesson = ({ onAdd }) => {
           required
           className="form-control my-2"
         />
-        <button type="submit" className="btn btn-primary">Tambah</button>
+        <button type="submit" className="btn btn-primary me-2">Tambah</button>
+        <button type="button" className="btn btn-secondary" onClick={onCancel}>Batal</button>
       </form>
     </div>
   );

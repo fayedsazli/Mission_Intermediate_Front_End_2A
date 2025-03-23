@@ -1,12 +1,52 @@
 {
   "lessons": [
     {
-      "id": "e662e63c-a689-4451-9330-7d2ac2b5f204",
-      "lesson_title": "jkjj",
-      "lesson_desc": "iii",
-      "tutor_name": "iiiii",
-      "tutor_job": "iii",
-      "price": 9999999999
+      "id": "c3e46d98-94fc-4d07-bd8a-2e7b5f89a8b1",
+      "lesson_title": "JavaScript Lanjutan",
+      "lesson_desc": "Mendalami konsep JavaScript modern dan asinkron.",
+      "tutor_name": "Dewi Anggraini",
+      "tutor_job": "Frontend Developer",
+      "price": 750000
+    },
+    {
+      "id": "a9f0d03e-7b1c-4e89-84f3-b18b33c5a1e0",
+      "lesson_title": "Machine Learning untuk Pemula",
+      "lesson_desc": "Pengenalan dasar tentang machine learning dan implementasi sederhana.",
+      "tutor_name": "Rizky Pratama",
+      "tutor_job": "AI Specialist",
+      "price": 1000000
+    },
+    {
+      "id": "d5f1e2c4-9b7d-4a3a-87c5-51d9f638a8d6",
+      "lesson_title": "UI/UX Design",
+      "lesson_desc": "Belajar desain antarmuka dan pengalaman pengguna dengan tools modern.",
+      "tutor_name": "Nadia Kusuma",
+      "tutor_job": "UI/UX Designer",
+      "price": 850000
+    },
+    {
+      "id": "f8c3a72b-4c6a-43d1-94b7-8f9e3c9bfa92",
+      "lesson_title": "Cyber Security Fundamentals",
+      "lesson_desc": "Memahami dasar-dasar keamanan siber dan cara melindungi sistem.",
+      "tutor_name": "Ari Wibowo",
+      "tutor_job": "Cyber Security Expert",
+      "price": 1200000
+    },
+    {
+      "id": "e1d4f2b8-91c7-4a23-80a5-33b9fbc5d9f7",
+      "lesson_title": "Digital Marketing",
+      "lesson_desc": "Strategi pemasaran digital untuk meningkatkan engagement dan penjualan.",
+      "tutor_name": "Siti Rahayu",
+      "tutor_job": "Digital Marketer",
+      "price": 950000
+    },
+    {
+      "id": "a3f7c8d9-5b1a-4d8a-b9f5-22c8b3a1f4e9",
+      "lesson_title": "Data Science dengan Python",
+      "lesson_desc": "Analisis data menggunakan Python, pandas, dan machine learning.",
+      "tutor_name": "Daniel Prasetyo",
+      "tutor_job": "Data Scientist",
+      "price": 1100000
     }
   ]
 }
