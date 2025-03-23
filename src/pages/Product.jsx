@@ -10,7 +10,6 @@ import useLessons from "../hooks/uselesson";
 const Product = () => {
   const [lessons,setLessons] = useLessons();
 
-
   // Fungsi untuk menambah lesson baru
 
   return (
@@ -21,7 +20,7 @@ const Product = () => {
           <Desc judul={"judul"} deskripsi={"deskripsi"} />
         </div>
         <div className="row">
-          <div className="col-lg-3 col-12 bg-primary p-3">
+          <div className="col-lg-3 col-12 p-3">
           <ProductFilter />
           </div>
           {/* Kirim lessons ke ProductCard */}

@@ -2,7 +2,7 @@ import React from "react";
 
 const DropdownList = () => {
   return (
-    <ul className="list-group">
+    <ul className="list-group text-start">
         <li class="list-group-item d-flex justify-content-between align-items-start">
     <div class="ms-2 me-auto">
       Content for list item

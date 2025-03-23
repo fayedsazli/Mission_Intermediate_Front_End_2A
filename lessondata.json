@@ -1,14 +1,6 @@
 {
   "lessons": [
     {
-      "id": "c3e46d98-94fc-4d07-bd8a-2e7b5f89a8b1",
-      "lesson_title": "JavaScript Lanjutan",
-      "lesson_desc": "Mendalami konsep JavaScript modern dan asinkron.",
-      "tutor_name": "Dewi Anggraini",
-      "tutor_job": "Frontend Developer",
-      "price": 750000
-    },
-    {
       "id": "a9f0d03e-7b1c-4e89-84f3-b18b33c5a1e0",
       "lesson_title": "Machine Learning untuk Pemula",
       "lesson_desc": "Pengenalan dasar tentang machine learning dan implementasi sederhana.",

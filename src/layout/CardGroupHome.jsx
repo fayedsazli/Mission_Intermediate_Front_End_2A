@@ -1,6 +1,6 @@
 import Card from "../common/card";
 
-const CardGroup = ({ lessons, CardWidth = 3, onEdit, children }) => {
+const CardGroupHome = ({ lessons, CardWidth = 3,}) => {
   return (
     <div className="container-fluid mt-4">
       <div className={`row row-cols-1 row-cols-lg-${CardWidth} g-3`}>
@@ -15,10 +15,6 @@ const CardGroup = ({ lessons, CardWidth = 3, onEdit, children }) => {
             tutorName={lesson.tutor_name}
             job={lesson.tutor_job}
           >
-            {children(lesson.id)}
-            <button onClick={() => onEdit(lesson.id)} className="btn btn-warning m-0">
-              Edit
-            </button>
           </Card>
         ))}
       </div>
@@ -26,4 +22,4 @@ const CardGroup = ({ lessons, CardWidth = 3, onEdit, children }) => {
   );
 };
 
-export default CardGroup;
+export default CardGroupHome;

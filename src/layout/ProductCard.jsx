@@ -35,15 +35,14 @@ const ProductCard = ({ lessons, setLessons }) => {
   };
 
   return (
-    <div className="container col-lg-9 col-12 bg-secondary row-gap-5">
-      <h3>Product</h3>
+    <div className="container col-lg-9 col-12 row-gap-1 d-flex flex-column">
       {/* Tombol Tambah Data */}
       {!editingLesson && !addingLesson && (
         <button
-          className="btn btn-success mb-3"
+          className="btn btn-success mb-3 col-2 d-flex align-self-center align-self-lg-end"
           onClick={() => setAddingLesson(true)}
         >
-          Tambah Data
+          Tambah Data 
         </button>
       )}
 
