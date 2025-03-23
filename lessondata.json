@@ -1,36 +1,3 @@
 {
-  "lessons": [
-    {
-      "id": "1",
-      "lesson_title": "Belajar JavaScript Dasar",
-      "lesson_desc": "Pelajari dasar-dasar JavaScript mulai dari variabel, fungsi, hingga DOM manipulation.",
-      "tutor_name": "Andi Wijaya",
-      "tutor_job": "Senior Frontend Developer",
-      "price": 150000
-    },
-    {
-      "id": "2",
-      "lesson_title": "Mastering React JS",
-      "lesson_desc": "Kursus lengkap untuk menguasai React JS dengan proyek nyata.",
-      "tutor_name": "Rina Kusuma",
-      "tutor_job": "Full Stack Developer",
-      "price": 250000
-    },
-    {
-      "id": 1742626573280,
-      "lesson_title": "df",
-      "lesson_desc": "d",
-      "tutor_name": "d",
-      "tutor_job": "d",
-      "price": "222"
-    },
-    {
-      "id": 1742627119645,
-      "lesson_title": "daff",
-      "lesson_desc": "afd",
-      "tutor_name": "dd",
-      "tutor_job": "ddddd",
-      "price": 221111
-    }
-  ]
+  "lessons": []
 }

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { v4 as uuidv4 } from "uuid";
 
 const AddLesson = ({ onAdd }) => {
   const [lessonTitle, setLessonTitle] = useState("");
@@ -6,12 +7,13 @@ const AddLesson = ({ onAdd }) => {
   const [tutorName, setTutorName] = useState("");
   const [tutorJob, setTutorJob] = useState("");
   const [price, setPrice] = useState("");
+  
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     
     const newLesson = {
-      id: Date.now(), // ID sementara sebelum disimpan ke server
+      id: uuidv4(), // ID sementara sebelum disimpan ke server
       lesson_title: lessonTitle,
       lesson_desc: lessonDesc,
       tutor_name: tutorName,

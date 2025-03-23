@@ -1,6 +1,6 @@
 import Card from "../common/card";
 
-const CardGroup = ({ lessons, CardWidth = 3 }) => {
+const CardGroup = ({ lessons, CardWidth = 3, children, handleDelete }) => {
   return (
     <div className="container-fluid mt-4">
       <div className={`row row-cols-1 row-cols-lg-${CardWidth} g-3`}>
@@ -8,13 +8,15 @@ const CardGroup = ({ lessons, CardWidth = 3 }) => {
           <Card
             key={lesson.id}
             title={lesson.lesson_title}
-            image={lesson.image || "Rectangle1.png"} 
-            avatarImg={lesson.avatar || "Avatar1.svg"} 
+            image={lesson.image || "Rectangle1.png"}
+            avatarImg={lesson.avatar || "Avatar1.svg"}
             desc={lesson.lesson_desc || "Deskripsi tidak tersedia"}
             price={lesson.price}
             tutorName={lesson.tutor_name}
             job={lesson.tutor_job}
-          />
+          >
+            {children && children(lesson.id, handleDelete)}
+          </Card>
         ))}
       </div>
     </div>

@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Desc from "../common/desc";
 import Footer from "../layout/Footer";
 import Navbar from "../layout/Navbar";
@@ -6,18 +6,12 @@ import ProductAdd from "../layout/ProductAdd";
 import ProductCard from "../layout/ProductCard";
 import ProductFilter from "../layout/ProductFilter";
 import AddLesson from "../layout/AddDataLesson";
+import useLessons from "../hooks/uselesson";
 
 const Product = () => {
   const [showComponent, setShowComponent] = useState("filter");
-  const [lessons, setLessons] = useState([]); // State utama
+  const [lessons,setLessons] = useLessons();
 
-  // Ambil data saat pertama kali komponen dimuat
-  useEffect(() => {
-    fetch("http://localhost:5000/lessons")
-      .then((res) => res.json())
-      .then((data) => setLessons(data))
-      .catch((error) => console.error("Error fetching data:", error));
-  }, []);
 
   // Fungsi untuk menambah lesson baru
   const addLesson = (newLesson) => {
@@ -49,7 +43,7 @@ const Product = () => {
             {showComponent === "add" && <AddLesson onAdd={addLesson} />}
           </div>
           {/* Kirim lessons ke ProductCard */}
-          <ProductCard lessons={lessons} />
+          <ProductCard lessons={lessons} setLessons={setLessons} />
         </div>
       </div>
       <Footer />
