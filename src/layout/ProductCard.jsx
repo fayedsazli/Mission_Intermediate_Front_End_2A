@@ -67,7 +67,7 @@ const ProductCard = ({ lessons, setLessons }) => {
             {(id) => (
               <button
                 onClick={() => handleDelete(id)}
-                className="btn btn-danger"
+                className="btn btn-danger w-25"
               >
                 Delete
               </button>

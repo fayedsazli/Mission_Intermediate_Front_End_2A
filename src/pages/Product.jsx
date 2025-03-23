@@ -14,8 +14,8 @@ const Product = ({setPage}) => {
     <>
        <Navbar setPage={setPage} />
       <div className="container d-flex flex-column text-center my-3">
-        <div className="align-self-start">
-          <Desc judul={"judul"} deskripsi={"deskripsi"} />
+        <div className="align-self-lg-start">
+          <Desc judul={"Koleksi Video Pembelajaran Unggulan"} deskripsi={"Jelajahi Dunia Pengetahuan Melalui Pilihan Kami!"} />
         </div>
         <div className="row">
           <div className="col-lg-3 col-12 p-3">

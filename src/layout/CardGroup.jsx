@@ -14,11 +14,13 @@ const CardGroup = ({ lessons, CardWidth = 3, onEdit, children }) => {
             price={lesson.price}
             tutorName={lesson.tutor_name}
             job={lesson.tutor_job}
-          >
+          ><div className="d-flex flex-column gap-1 ">
             {children(lesson.id)}
-            <button onClick={() => onEdit(lesson.id)} className="btn btn-warning m-0">
+            <button onClick={() => onEdit(lesson.id)} className="btn btn-warning w-25">
               Edit
             </button>
+            
+          </div>
           </Card>
         ))}
       </div>
